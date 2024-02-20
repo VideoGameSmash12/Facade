@@ -40,13 +40,9 @@ public class LookaheadEnumeration implements Enumeration
         }
         throw new NoSuchElementException();
     }
-    
-    private final /* synthetic */ void this() {
-        this.peeked = false;
-    }
-    
+
     public LookaheadEnumeration(final Enumeration ground) {
-        this.this();
+        this.peeked = false;
         this.ground = ground;
     }
 }

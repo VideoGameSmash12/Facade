@@ -1,14 +1,11 @@
 package wordnet.browser;
 
-import java.awt.AWTEvent;
 import java.awt.event.WindowEvent;
 import java.awt.Window;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Font;
-import java.awt.Component;
-import java.awt.LayoutManager;
 import java.awt.Frame;
 import java.awt.Rectangle;
 import java.awt.Button;

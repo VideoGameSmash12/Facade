@@ -1,6 +1,5 @@
 package wordnet.browser;
 
-import java.awt.event.WindowListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.ItemEvent;
@@ -9,16 +8,15 @@ import java.awt.Choice;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Label;
 import java.awt.Panel;
 import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
-import java.awt.LayoutManager;
 import java.awt.GridBagLayout;
 import java.util.Enumeration;
-import wordnet.wn.IndexWord;
 import java.util.Vector;
+
+import wordnet.wn.IndexWord;
 import wordnet.wn.POS;
 import java.awt.List;
 import java.awt.TextField;
@@ -39,7 +37,7 @@ class SearchFrame extends Frame
         this.resultList.add("Searching for " + text + "...");
         this.resultList.setEnabled(false);
         final Vector<String> vector = new Vector<String>();
-        final Enumeration searchIndexWords = this.dictionary.searchIndexWords(this.pos, text);
+        final Enumeration<IndexWord> searchIndexWords = this.dictionary.searchIndexWords(this.pos, text);
         while (searchIndexWords.hasMoreElements()) {
             vector.addElement(searchIndexWords.nextElement().getLemma());
         }
@@ -51,13 +49,9 @@ class SearchFrame extends Frame
         this.resultList.setEnabled(true);
     }
     
-    private final /* synthetic */ void this() {
-        this.pos = POS.CATS[0];
-    }
-    
     SearchFrame(final BrowserPanel browser) {
         super("Substring Search");
-        this.this();
+        this.pos = POS.CATS[0];
         this.browser = browser;
         this.dictionary = browser.dictionary;
         this.setVisible(false);

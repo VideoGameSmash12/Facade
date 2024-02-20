@@ -202,13 +202,9 @@ public class BrowserPanel extends Panel
         }
     }
     
-    private final /* synthetic */ void this() {
+    public BrowserPanel(final DictionaryDatabase dictionary) {
         this.posBoxes = new Checkbox[POS.CATS.length];
         this.posChoices = new Choice[POS.CATS.length];
-    }
-    
-    public BrowserPanel(final DictionaryDatabase dictionary) {
-        this.this();
         this.dictionary = dictionary;
         this.setLayout(new GridBagLayout());
         final GridBagConstraints gridBagConstraints = new GridBagConstraints();

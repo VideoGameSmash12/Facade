@@ -8,7 +8,7 @@ public interface DictionaryDatabase
     
     String lookupBaseForm(final POS p0, final String p1);
     
-    Enumeration searchIndexWords(final POS p0, final String p1);
+    Enumeration<IndexWord> searchIndexWords(final POS p0, final String p1);
     
     Enumeration synsets(final POS p0);
 }

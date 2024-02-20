@@ -1,8 +1,6 @@
 package wordnet.browser;
 
 import java.net.URL;
-import java.awt.Component;
-import wordnet.wn.DictionaryDatabase;
 import wordnet.wn.FileBackedDictionary;
 import wordnet.wn.RemoteFileManager;
 import java.applet.Applet;

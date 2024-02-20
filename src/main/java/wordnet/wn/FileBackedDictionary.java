@@ -140,14 +140,10 @@ public class FileBackedDictionary implements DictionaryDatabase
                     throw new RuntimeException(ex.toString());
                 }
             }
-            
-            private final /* synthetic */ void this() {
+
+            {
                 this.filename = FileBackedDictionary.getIndexFilename(pos);
                 this.nextOffset = 0L;
-            }
-            
-            {
-                this.this();
             }
         });
     }
@@ -177,24 +173,15 @@ public class FileBackedDictionary implements DictionaryDatabase
                 }
             }
             
-            private final /* synthetic */ void this() {
+            {
                 this.filename = FileBackedDictionary.getDataFilename(pos);
                 this.nextOffset = 0L;
-            }
-            
-            {
-                this.this();
             }
         });
     }
     
-    private final /* synthetic */ void this() {
-        this.DEFAULT_CACHE_CAPACITY = 1000;
-        this.entityCache = new LRUCache(1000);
-    }
-    
     public FileBackedDictionary(final FileManagerInterface db) {
-        this.this();
+        this.entityCache = new LRUCache(1000);
         this.db = db;
     }
     
